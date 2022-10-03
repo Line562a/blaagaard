@@ -1,0 +1,62 @@
+/* generelt generelt generelt generelt generelt */
+
+* {
+box-sizing: border-box;
+--sort: rgb(0, 0, 0);
+--hvid: rgb(255, 255, 255);
+}
+
+body {
+max-width: 100%;
+margin: 0 auto;
+line-height: 1.4;
+background-color: var(--sort);
+}
+
+img,
+video,
+iframe {
+max-width: 100%;
+height: auto;
+display: block;
+}
+
+/* typografi typografi typografi typografi typografi */
+
+@font-face {
+font-family: druk_cond;
+src: url(../fonts/DrukCond-SuperItalic-Trial.otf);
+}
+
+@font-face {
+font-family: druk_medium;
+src: url(../fonts/DrukWide-Medium-Trial.otf);
+}
+
+h1 {
+font-family: druk_cond;
+text-transform: uppercase;
+font-size: 10rem;
+line-height: 0.8;
+color: var(--hvid);
+}
+
+h2 {
+font-family: druk_medium;
+text-transform: uppercase;
+font-size: 1.5rem;
+line-height: 0.8;
+color: var(--hvid);
+}
+
+p {
+font-family: 'Roboto', sans-serif;
+font-size: 0.9rem;
+color: var(--hvid);
+}
+
+article {
+width: 50%;
+margin: 0 auto;
+}
+

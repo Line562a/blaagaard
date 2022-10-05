@@ -23,6 +23,22 @@ height: auto;
 display: block;
 }
 
+button {
+font-family: druk_medium;
+text-transform: uppercase;
+font-size: 1rem;
+background-color: transparent;
+cursor: pointer;
+color: var(--hvid);
+padding: 0.5rem 2rem;
+text-align: center;
+border: 1px solid var(--hvid);
+}
+
+button:hover {
+box-shadow: inset 0px 0px 25px -7px rgba(255, 255, 255, 0.7);;
+}
+
 /* typografi typografi typografi typografi typografi */
 
 @font-face {
@@ -57,7 +73,7 @@ font-size: 0.9rem;
 color: var(--hvid);
 }
 
-/* mainindhold mainindhold mainindhold mainindhold */
+/* hero hero hero hero hero hero hero */
 
 section {
 height: 100vh;
@@ -87,13 +103,17 @@ height: 100%;
 object-fit: cover;
 }
 
+.logo_hero {
+padding-bottom: 1rem;
+}
+
 .hero_content {
 grid-row-start: 3;
 grid-column-start: 2;
 }
 
 a:hover {
-color: rgb(0, 255, 128);
+color: #248bf5;
 }
 
 ul, li {
@@ -102,6 +122,104 @@ list-style-type: none;
 display: inline-block;
 display: flex;
 justify-content: space-around;
+}
+
+/* logo logo logo logo logo logo logo logo logo */
+
+.logo {
+position: absolute;
+top: 20px;
+right: 20px;
+z-index: 1;
+}
+
+/* imessage imessage imessage imessage imessage */
+
+.kolonne2 {
+padding-top: 10rem;
+}
+
+.kolonne2_img {
+display: none;
+}
+
+.imessage {
+display: flex;
+flex-direction: column;
+font-size: 1.25rem;
+margin: 0 auto 1rem;
+max-width: 600px;
+padding: 0.5rem 1.5rem;
+}
+
+.imessage p {
+border-radius: 1.15rem;
+line-height: 1.25;
+max-width: 75%;
+padding: 0.5rem .875rem;
+position: relative;
+word-wrap: break-word;
+}
+
+.imessage p::before,
+.imessage p::after {
+bottom: -0.1rem;
+content: "";
+height: 1rem;
+position: absolute;
+}
+
+p.from-me {
+align-self: flex-end;
+background-color: #248bf5;
+color: #fff; 
+}
+
+p[class^="from-"] {
+margin: 0.5rem 0;
+width: fit-content;
+}
+
+p.from-me ~ p.from-me {
+margin: 0.25rem 0 0;
+}
+
+p.from-me ~ p.from-me:not(:last-child) {
+margin: 0.25rem 0 0;
+}
+
+p.from-me ~ p.from-me:last-child {
+margin-bottom: 0.5rem;
+}
+
+p.from-them {
+align-items: flex-start;
+background-color: #e5e5ea;
+color: #000;
+}
+
+p.from-them::after {
+border-bottom-right-radius: 0.5rem;
+left: 20px;
+transform: translate(-30px, -2px);
+width: 10px;
+}
+
+/* kolonne3 kolonne3 kolonne3 kolonne3 kolonne3 kolonne3 */
+
+.kolonne3 {
+background-image:  url(../images/image00001.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+display: grid;
+grid-template-rows: 1fr 1fr 1fr;
+grid-template-columns: 1fr 2fr;
+}
+
+.kolonne3 .imessage  {
+grid-row: 3 / 4;
+grid-column: 2 / 3;
 }
 
 /* responsiv responsiv responsiv responsiv responsiv */

@@ -19,9 +19,9 @@ img,
 video,
 iframe {
 max-width: 100%;
-height: auto;
-display: block;
-overflow: hidden;
+max-height: 100%;
+object-fit: cover;
+align-self: stretch;
 }
 
 button {
@@ -74,20 +74,21 @@ font-family: 'Roboto', sans-serif;
 color: var(--hvid);
 }
 
-/* hero hero hero hero hero hero hero */
+/* scroll */
 
 section {
 height: 100vh;
 width: 100vw;
-scroll-snap-align: start;
-display: flex;
+/* scroll-snap-align: start;*/
 }
 
 .container {
-scroll-snap-type: y mandatory;
-overflow-y: scroll;
-height: 100vh;
+/* scroll-snap-type: y mandatory;
+overflow: auto; 
+height: 100vh;*/
 }
+
+/* hero hero hero hero hero hero hero */
 
 .kolonne1 {
 background-size: cover;
@@ -95,6 +96,7 @@ display: grid;
 grid-template-columns: 1fr 10fr 1fr;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 background-color: rgba(0, 0, 0, 0.6);
+z-index: 2;
 }
 
 video {
@@ -114,26 +116,7 @@ grid-row-start: 3;
 grid-column-start: 2;
 }
 
-a:hover {
-color: #248bf5;
-}
-
-ul, li {
-text-decoration: none;
-list-style-type: none;
-display: inline-block;
-display: flex;
-justify-content: space-around;
-}
-
 /* logo logo logo logo logo logo logo logo logo */
-
-.logo {
-position: absolute;
-top: 20px;
-right: 20px;
-z-index: 1;
-}
 
 /* imessage imessage imessage imessage imessage */
 
@@ -210,7 +193,7 @@ padding-inline: 1rem;
 }
 
 .kolonne2, .imessage,
-.kolonne3, .imessage
+.kolonne3, .imessage,
 .kolonne4, .imessage {
 grid-row-start: 2;
 }
@@ -224,6 +207,12 @@ margin-top: 1.5rem;
 
 .kolonne2_img {
 display: none;
+background-image: url(../images/billede_i_logo.png);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+grid-column: 1 / 4;
+grid-row: 1 / 5;
 }
 
 /* kolonne3 kolonne3 kolonne3 kolonne3 kolonne3 kolonne3 */
@@ -245,16 +234,54 @@ margin-top: 1.5rem;
 display: none;
 }
 
+.kolonne4_img {
+display: none;
+background-image: url(../images/Hanin_02_highres.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+grid-column: 1 / 4;
+grid-row: 1 / 5;
+}
+
+/* footer footer footer footer footer footer footer */
+
+footer {
+position: sticky;
+float: right;
+bottom: 0;
+height: 50px;
+width: 100%;
+}
+
+a:hover {
+color: #248bf5;
+}
+
+ul, li {
+text-decoration: none;
+list-style-type: none;
+display: inline-block;
+display: flex;
+justify-content: space-around;
+}
+
 /* responsiv responsiv responsiv responsiv responsiv */
 
 @media all and (min-width: 800px) {
 .kolonne1 {
 grid-template-columns: 1fr 4fr 1fr;
 }
+
+footer {
+height: 40px;
+width: 350px;
+}
 }
 
 @media all and (min-width: 1000px) {
-.kolonne2 {
+.kolonne2, 
+.kolonne4 {
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 padding-top: 0;
@@ -262,30 +289,12 @@ padding-top: 0;
 
 .kolonne2_img {
 display: block;
-z-index: -1;
 grid-column: 1 / 4;
 }
 
 .kolonne2 .imessage {
 grid-column: 4 / 6;
-padding: 3rem;
-}
-
-.kolonne4 {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-padding-top: 0;
-}
-
-.kolonne4_img {
-display: block;
-z-index: -1;
-grid-column: 3 / 6;
-}
-
-.kolonne4 .imessage {
-grid-column: 1 / 3;
-grid-row: 1;
+grid-row: 2;
 padding: 3rem;
 }
 
@@ -298,6 +307,18 @@ grid-template-columns: 1fr 2fr 1fr;
 .kolonne3 .imessage  {
 grid-row: 2 / 3;
 grid-column: 2 / 3;
+}
+
+.kolonne4_img {
+display: block;
+z-index: -1;
+grid-column: 3 / 6;
+}
+
+.kolonne4 .imessage {
+grid-column: 1 / 3;
+grid-row: 2;
+padding: 3rem;
 }
 }
 

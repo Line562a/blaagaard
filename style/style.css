@@ -21,6 +21,7 @@ iframe {
 max-width: 100%;
 height: auto;
 display: block;
+overflow: hidden;
 }
 
 button {
@@ -33,10 +34,11 @@ color: var(--hvid);
 padding: 0.5rem 2rem;
 text-align: center;
 border: 1px solid var(--hvid);
+max-width: 250px;
 }
 
 button:hover {
-box-shadow: inset 0px 0px 25px -7px rgba(255, 255, 255, 0.7);;
+box-shadow: inset 0px 0px 25px -7px rgba(255, 255, 255, 0.7);
 }
 
 /* typografi typografi typografi typografi typografi */
@@ -69,7 +71,6 @@ color: var(--hvid);
 
 p, a {
 font-family: 'Roboto', sans-serif;
-font-size: 0.9rem;
 color: var(--hvid);
 }
 
@@ -79,6 +80,7 @@ section {
 height: 100vh;
 width: 100vw;
 scroll-snap-align: start;
+display: flex;
 }
 
 .container {
@@ -135,22 +137,10 @@ z-index: 1;
 
 /* imessage imessage imessage imessage imessage */
 
-.kolonne2 {
-padding-top: 10rem;
-}
-
-.kolonne2 button {
-margin-top: 1.5rem;
-}
-
-.kolonne2_img {
-display: none;
-}
-
 .imessage {
 display: flex;
 flex-direction: column;
-font-size: 1.25rem;
+font-size: 1rem;
 margin: 0 auto 1rem;
 max-width: 600px;
 padding: 0.5rem 1.5rem;
@@ -180,7 +170,7 @@ color: #fff;
 }
 
 p[class^="from-"] {
-margin: 0.5rem 0;
+margin: 0.3rem 0;
 width: fit-content;
 }
 
@@ -193,7 +183,7 @@ margin: 0.25rem 0 0;
 }
 
 p.from-me ~ p.from-me:last-child {
-margin-bottom: 0.5rem;
+margin-bottom: 0.3rem;
 }
 
 p.from-them {
@@ -209,6 +199,33 @@ transform: translate(-30px, -2px);
 width: 10px;
 }
 
+/* mobilgrid mobilgrid mobilgrid mobilgrid mobilgrid */
+
+.kolonne2,
+.kolonne3,
+.kolonne4 {
+display: grid;
+grid-template-rows: 1fr 2fr 1fr;
+padding-inline: 1rem;
+}
+
+.kolonne2, .imessage,
+.kolonne3, .imessage
+.kolonne4, .imessage {
+grid-row-start: 2;
+}
+
+/* kolonne2 kolonne2 kolonne2 kolonne2 kolonne2 kolonne2 */
+
+.kolonne2 button,
+.kolonne3 button {
+margin-top: 1.5rem;
+}
+
+.kolonne2_img {
+display: none;
+}
+
 /* kolonne3 kolonne3 kolonne3 kolonne3 kolonne3 kolonne3 */
 
 .kolonne3 {
@@ -216,21 +233,9 @@ background-image:  url(../images/image00001.jpg);
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
-display: grid;
-grid-template-rows: 1fr 1fr 1fr;
-grid-template-columns: 1fr 2fr;
-}
-
-.kolonne3 .imessage  {
-grid-row: 3 / 4;
-grid-column: 2 / 3;
 }
 
 /* kolonne4 kolonne4 kolonne4 kolonne4 kolonne4 */
-
-.kolonne4 {
-padding-top: 10rem;
-}
 
 .kolonne4 button {
 margin-top: 1.5rem;
@@ -282,6 +287,17 @@ grid-column: 3 / 6;
 grid-column: 1 / 3;
 grid-row: 1;
 padding: 3rem;
+}
+
+.kolonne3 {
+display: grid;
+grid-template-rows: 1fr 1fr 1fr;
+grid-template-columns: 1fr 2fr 1fr;
+}
+
+.kolonne3 .imessage  {
+grid-row: 2 / 3;
+grid-column: 2 / 3;
 }
 }
 

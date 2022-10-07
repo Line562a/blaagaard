@@ -266,6 +266,10 @@ display: flex;
 justify-content: space-around;
 }
 
+/* portfolio portfolio portfolio portfolio  */
+
+
+
 /* responsiv responsiv responsiv responsiv responsiv */
 
 @media all and (min-width: 800px) {
@@ -327,3 +331,4 @@ padding: 3rem;
 grid-template-columns: 1fr 2fr 1fr;
 }
 }
+

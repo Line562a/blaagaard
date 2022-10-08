@@ -88,6 +88,16 @@ overflow: auto;
 height: 100vh;*/
 }
 
+/* header header header header header header */
+
+header {
+position: fixed;
+top: 2%;
+z-index: 2;
+right: 3%;
+width: 100px;
+}
+
 /* hero hero hero hero hero hero hero */
 
 .kolonne1 {

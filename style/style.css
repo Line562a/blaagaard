@@ -208,6 +208,18 @@ padding-inline: 1rem;
 grid-row-start: 2;
 }
 
+/* youtubevideo youtubevideo youtubevideo youtubevideo */
+
+.video_kolonne {
+display: flex;
+justify-content: center;
+justify-items: center;
+}
+
+.video_kolonne iframe {
+width: 100%;
+}
+
 /* kolonne2 kolonne2 kolonne2 kolonne2 kolonne2 kolonne2 */
 
 .kolonne2 button,
@@ -252,6 +264,20 @@ background-position: center;
 background-size: cover;
 grid-column: 1 / 4;
 grid-row: 1 / 5;
+}
+
+/* portfolio portfolio portfolio portfolio portfolio */
+
+.portfolio {
+display: grid;
+grid-template-columns: 1fr 1fr;
+width: 50%;
+margin: 0 auto;
+gap: 1rem;
+}
+
+.video1 {
+grid-column: 1 / 3;
 }
 
 /* footer footer footer footer footer footer footer */
